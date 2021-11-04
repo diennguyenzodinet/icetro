@@ -1,0 +1,172 @@
+@use '../abstracts' as *;
+
+.hero {
+    position: relative;
+    background-image: url('../../../images/BG.png');
+    height: 115.6rem;
+    background-size: cover;
+    margin-bottom: 10.2rem;
+    
+
+    &-content {
+        margin-top: 5.9rem;
+        display: flex;
+
+        .hero__left {
+            .ice {
+                position: absolute;
+                
+                &__left {
+                    left: 9.1rem;
+                    top: 76.1rem;
+                    width: 22.2rem;
+                    height: 19rem;
+                }
+            }
+        }
+
+        .hero__right {
+            height: 62rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .ice {
+                position: absolute;
+
+                &__right {
+                    right: 13rem;
+                    bottom: 25rem;
+                    width: 33.3rem;
+                    height: 18.4rem;
+                    z-index: 20;
+                }
+        
+                &__big {
+                    width: 42.8rem;
+                    height: 56.8rem;
+                }
+        
+                &__left2 {
+                    right: 2rem;
+                    top: 0rem;
+                    width: 14.2rem;
+                    height: 12.3rem;
+                }
+            }
+        }
+
+        &__heading {
+            color: $color-white;
+            max-width: 72.2rem;
+            width: 100%;
+            line-height: 6.2rem
+        }
+
+        &__body {
+            margin-top: 3rem;
+            max-width: 51rem;
+            width: 100%;
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 2.6rem;
+        }
+
+        &__feature {
+            margin-top: 3.2rem;
+            display: flex;
+            color: white;
+            font-weight: 300;
+        }
+
+        .feature__box {
+            &:first-child {
+                margin-right: 3.2rem;
+            }
+
+            .feature__icon {
+                margin-top: 4px;
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+   
+
+    .slogan {
+        position: absolute;
+        top: 97.2rem;
+        text-align: center;
+        width: 100%;
+        line-height: 7rem;
+        letter-spacing: 1px;
+        color: $color-secondary;
+        width: 90%;
+    }
+}
+
+header {
+    height: 11rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        width: 10.6rem;
+        height: 7.6rem;
+        margin-top: 2.6rem;
+    }
+
+    .hotline__box {
+        margin-top: 4.4rem;
+        border: 1px solid white;
+        border-radius: 8px;
+        background-color: white;
+        padding: 1.2rem 2.4rem;
+        display: inline-flex;
+        font-size: 16px;
+        color: $color-tertiary;
+        font-weight: 600;
+        align-items: center;
+
+        img {
+            width: 2.2rem;
+            height: 2.2rem;
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .hero-content {
+        flex-direction: column;
+
+        .hero__left {
+            position: relative;
+        }
+    }
+
+    .hero-content .hero__right .ice__right {
+        right: -3rem !important;
+                bottom: -4rem !important;
+    }
+
+    .ice__left2 {
+        display: none !important;
+    }
+
+    .ice__left {
+        display: none !important;
+    }
+
+    .slogan {
+        margin-top: 23rem;
+    }
+}

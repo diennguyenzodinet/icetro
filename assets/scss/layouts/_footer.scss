@@ -1,0 +1,131 @@
+@use '../abstracts' as *;
+
+.footer {
+    padding: 3rem 0;
+    background-color: $color-tertiary;
+    position: relative;
+
+    .ice__footer {
+        position: absolute;
+        width: 21.8rem;
+        height: 18.8rem;
+        right: 5rem;
+        top: -5rem;
+    }
+    
+    &__email {
+        h3 {
+            color: white;
+        }
+
+        form {
+            margin-top: 2rem;
+            position: relative;
+            width: 61.4rem;
+            input {
+                border-radius: 1rem;
+                font-size: 1.8rem;
+                padding: 1.5rem 2rem;
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                background-color: #fff;
+                opacity: .3;
+            }
+
+            button {
+                position: absolute;
+                top:2px;
+                right: 2px;
+                height: 92%;
+                padding: 0 3rem;
+                font-size: 1.8rem;
+                font-weight: 800;
+                background: white;
+                border: none;
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    &__copy {
+        margin-top: 4rem;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .contact {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &__address {
+            h4 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: white;
+                line-height: 2.6rem;
+            }
+
+            p {
+                margin-top: 2rem;
+                color: white;
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+                font-weight: 400;
+            }
+
+            span {
+                margin-left: 10rem;
+            }
+        }
+
+        &__social {
+            h6 {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: white;
+            }
+
+            .social__list {
+                display: flex;
+                
+                img {
+                    margin-top: 1rem;
+                    margin-right: 2rem;
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .footer__email {
+        form {
+            width: 100%;
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    .ice__footer {
+        top: -2rem !important;
+        right: 2rem !important;
+        width: 8.7rem !important;
+        height: 7.5rem !important;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start !important;
+
+        &__social {
+            margin-top: 3rem;
+        }
+    }
+}
